@@ -1,0 +1,19 @@
+# linux虚拟机地址
+linux:
+  address: 192.168.1.107
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://${linux.address}}:3306/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  # 等价于对应的类全加上 @JsonInclude(JsonInclude.Include.NON_NULL)
+  jackson:
+    default-property-inclusion: non_null
+
+# url的前缀，项目名
+server:
+  servlet-path: /sell
